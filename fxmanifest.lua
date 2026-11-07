@@ -5,7 +5,7 @@ lua54 'yes'
 name 'pigeon-driveby-rules'
 author 'Pigeon Studios'
 description 'Sets who can shoot from vehicles, from which seats, up to what speed, with which weapons and in which vehicles.'
-version '1.0.0'
+version '1.1.0'
 repository 'https://github.com/pigeon-studios-uk/pigeon-driveby-rules'
 
 -- Pigeon Studios version registry entry, read by server/version_check.lua.
