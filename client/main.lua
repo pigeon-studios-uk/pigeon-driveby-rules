@@ -13,7 +13,9 @@ local FIRST_PERSON = 4                         -- the first-person camera view m
 local AIM_CONTROLS = { 68, 91 }                -- INPUT_VEH_AIM (driver), INPUT_VEH_PASSENGER_AIM
 local SPEED_FACTOR = { mph = 2.236936, kmh = 3.6 }   -- from metres per second
 
-local strings = Locales[Config.Locale] or Locales.en
+-- 'auto' follows ox_lib's language (the ox:locale convar), and English when that isn't set.
+local locale = Config.Locale == 'auto' and GetConvar('ox:locale', 'en') or Config.Locale
+local strings = Locales[locale] or Locales.en
 local prepared = DrivebyRules.prepare(Config, joaat)
 local unitFactor = SPEED_FACTOR[Config.SpeedUnit] or SPEED_FACTOR.mph
 local unitLabel = Config.SpeedUnit == 'kmh' and 'km/h' or 'mph'
